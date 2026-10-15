@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - ภูผา นุดา | คณะนิติศาสตร์ มหาวิทยาลัยขอนแก่น</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Prompt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Prompt', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-gold-500 selection:text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-md text-white border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="flex items-center gap-2 text-xl font-bold tracking-wider text-amber-400">
+                    <i data-lucide="scale" class="w-6 h-6"></i>
+                    <span>PHUPHA.N</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                    <a href="#about" class="hover:text-amber-400 transition-colors">ประวัติส่วนตัว</a>
+                    <a href="#sop" class="hover:text-amber-400 transition-colors">เจตจำนง</a>
+                    <a href="#education" class="hover:text-amber-400 transition-colors">การศึกษา</a>
+                    <a href="#activities" class="hover:text-amber-400 transition-colors">กิจกรรม</a>
+                    <a href="#certificates" class="hover:text-amber-400 transition-colors">เกียรติบัตร</a>
+                    <a href="#contact" class="hover:text-amber-400 transition-colors">ติดต่อ</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-4 space-y-2">
+            <a href="#about" class="block py-2 text-slate-300 hover:text-amber-400">ประวัติส่วนตัว</a>
+            <a href="#sop" class="block py-2 text-slate-300 hover:text-amber-400">เจตจำนง</a>
+            <a href="#education" class="block py-2 text-slate-300 hover:text-amber-400">การศึกษา</a>
+            <a href="#activities" class="block py-2 text-slate-300 hover:text-amber-400">กิจกรรม</a>
+            <a href="#certificates" class="block py-2 text-slate-300 hover:text-amber-400">เกียรติบัตร</a>
+            <a href="#contact" class="block py-2 text-slate-300 hover:text-amber-400">ติดต่อ</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section / Cover -->
+    <section class="relative min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-amber-950 text-white pt-24 pb-16 flex items-center">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs sm:text-sm font-medium">
+                        <i data-lucide="award" class="w-4 h-4"></i>
+                        <span>โครงการเด็กดีมีที่เรียน | มหาวิทยาลัยขอนแก่น</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight">
+                        แฟ้มสะสมผลงาน <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500">
+                            คณะนิติศาสตร์
+                        </span>
+                    </h1>
+                    <p class="text-xl sm:text-2xl text-slate-300 font-light">
+                        นายภูผา นุดา <span class="text-base font-normal text-amber-400">(ภู)</span>
+                    </p>
+                    <p class="text-slate-400 max-w-xl leading-relaxed text-sm sm:text-base">
+                        นักเรียนโรงเรียนบ้านไผ่ (บ.พ.) ผู้มีความมุ่งมั่นสร้างความยุติธรรมในสังคม ปรารถนาที่จะเข้าศึกษาต่อสาขาวิชานิติศาสตรบัณฑิต มหาวิทยาลัยขอนแก่น
+                    </p>
+                    
+                    <div class="pt-4 flex flex-wrap gap-4">
+                        <a href="#sop" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-amber-500/20 transition-all">
+                            <span>อ่าน Statement of Purpose</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#contact" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-medium px-6 py-3 rounded-lg border border-slate-700 transition-all">
+                            <span>ช่องทางการติดต่อ</span>
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-64 sm:w-80 h-80 sm:h-96 rounded-2xl p-1 bg-gradient-to-b from-amber-400 via-amber-600/40 to-slate-800 shadow-2xl">
+                        <div class="w-full h-full bg-slate-900 rounded-[14px] overflow-hidden flex flex-col items-center justify-center p-6 text-center border border-slate-800">
+                            <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-slate-800 border-2 border-amber-400/50 flex items-center justify-center mb-4 shadow-inner">
+                                <i data-lucide="user" class="w-16 h-16 sm:w-20 sm:20 text-amber-400/80"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">นายภูผา นุดา</h3>
+                            <p class="text-xs text-slate-400 mt-1">แผนการเรียน คณิตศาสตร์-วิทยาศาสตร์</p>
+                            <span class="mt-4 px-3 py-1 bg-slate-800 text-amber-300 border border-amber-500/20 rounded-md text-xs">
+                                โรงเรียนบ้านไผ่ (บ.พ.)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Statement of Purpose Section -->
+    <section id="sop" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-xs font-semibold text-amber-600 uppercase tracking-widest">Statement of Purpose</h2>
+                <p class="text-3xl font-bold text-slate-900 mt-2">จดหมายแสดงเจตจำนง</p>
+                <div class="w-16 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="bg-slate-50 rounded-2xl p-6 sm:p-10 border border-slate-200 shadow-sm relative overflow-hidden">
+                <i data-lucide="quote" class="absolute top-4 right-4 w-24 h-24 text-slate-200/50 -rotate-12 pointer-events-none"></i>
+                
+                <div class="space-y-6 text-slate-700 leading-relaxed text-base sm:text-lg relative z-10">
+                    <p class="indent-8">
+                        ข้าพเจ้านายภูผา นุดา ชั้นมัธยมศึกษาปีที่ 6 แผนการเรียนคณิตศาสตร์-วิทยาศาสตร์ โรงเรียนบ้านไผ่ มีความประสงค์จะเข้าศึกษาต่อในระดับอุดมศึกษาในคณะนิติศาสตร์ของมหาวิทยาลัยขอนแก่น
+                    </p>
+                    <p class="indent-8">
+                        ข้าพเจ้าเป็นเด็กที่ไม่ได้เรียนเก่งมากแต่เป็นเด็กที่ชอบการอ่านหนังสือและชอบหาคำตอบในสิ่งที่ตัวข้าพเจ้านั้นไม่รู้ จุดเปลี่ยนที่ทำให้ตัวข้าพเจ้านั้นเริ่มสนใจและอยากศึกษาต่อในคณะนิติศาสตร์ เนื่องจากในวัยเด็กของข้าพเจ้าตั้งแต่ยังจำความไม่ได้ ครอบครัวของข้าพเจ้าได้เข้าไปในชั้นศาลเพื่อพิจารณาคดีกับคู่กรณี ซึ่งข้าพเจ้าในตอนเด็กยังไม่โตพอที่จะได้รับรู้เกี่ยวกับอะไรในวันนั้น จนถึงในวัยที่ข้าพเจ้านั้นโตพออยากรู้เรื่องราว ทำให้ตัวข้าพเจ้านั้นรู้ว่ากฎหมายเป็นสิ่งสำคัญที่เราต้องรู้ เพื่อที่เราจะไม่ได้ถูกเอารัดเอาเปรียบจากความอยุติธรรมเหมือนที่ครอบครัวของข้าพเจ้าเคยได้รับ และเป็นเหตุผลที่ตัวข้าพเจ้าอยากเข้าศึกษาในสาขาวิชานิติศาสตรบัณฑิต
+                    </p>
+                    
+                    <div class="my-8 p-6 bg-slate-900 text-amber-200 rounded-xl border-l-4 border-amber-500 italic text-center font-medium shadow-inner">
+                        "กฎหมายมิได้ใช้แค่กับคนที่อ่อนแอกว่า แต่กฎหมายคือสิ่งที่ทุกคนต้องเคารพและไม่มีใครอยู่เหนือกฎหมายเพราะประชาชนทุกคนเท่าเทียมกัน"
+                    </div>
+
+                    <p class="indent-8">
+                        เมื่อตัวข้าพเจ้าสำเร็จการศึกษานั้นมีความประสงค์ที่จะอยากทำงานในสายงานอาชีพอัยการเพื่อที่จะปกป้องผู้บริสุทธิ์จากความอยุติธรรม ซึ่งตัวข้าพเจ้าเองนั้นเชื่อว่าหากเราอยากให้ประเทศและบ้านเมืองของเราสงบสุขปราศจากความไม่ยุติธรรมนั้น ทุกคนต้องปฏิบัติตามกฎหมาย และเหตุนั้นตัวข้าพเจ้าจะพยายามเพื่อที่จะเป็นอัยการตามที่ข้าพเจ้านั้นตั้งใจเอาไว้ เพราะข้าพเจ้าอยากเห็นประเทศของข้าพเจ้าอยู่ในความถูกต้องและสงบสุข ปราศจากการเอารัดเอาเปรียบและความอยุติธรรม
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile & Information Section -->
+    <section id="about" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-semibold text-amber-600 uppercase tracking-widest">Personal Information</h2>
+                <p class="text-3xl font-bold text-slate-900 mt-2">ประวัติส่วนตัว & ข้อมูลทั่วไป</p>
+                <div class="w-16 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Personal Data Card -->
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                    <div class="flex items-center gap-3 mb-6 border-b border-slate-100 pb-4">
+                        <div class="p-2 bg-amber-50 rounded-lg text-amber-600">
+                            <i data-lucide="user" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800">ข้อมูลส่วนตัว</h3>
+                    </div>
+                    <ul class="space-y-3 text-slate-600 text-sm">
+                        <li><span class="font-semibold text-slate-900">ชื่อ-สกุล:</span> นายภูผา นุดา (ภู)</li>
+                        <li><span class="font-semibold text-slate-900">วันเกิด:</span> 8 พฤษภาคม 2551</li>
+                        <li><span class="font-semibold text-slate-900">อายุ:</span> 17 ปี</li>
+                        <li><span class="font-semibold text-slate-900">สัญชาติ/เชื้อชาติ:</span> ไทย / ไทย</li>
+                        <li><span class="font-semibold text-slate-900">ศาสนา:</span> พุทธ</li>
+                        <li><span class="font-semibold text-slate-900">ที่อยู่:</span> 175 หมู่ 10 บ.ละว้า ต.เมืองเพีย อ.บ้านไผ่ จ.ขอนแก่น</li>
+                    </ul>
+                </div>
+
+                <!-- Family Data Card -->
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                    <div class="flex items-center gap-3 mb-6 border-b border-slate-100 pb-4">
+                        <div class="p-2 bg-amber-50 rounded-lg text-amber-600">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800">ข้อมูลครอบครัว</h3>
+                    </div>
+                    <ul class="space-y-4 text-slate-600 text-sm">
+                        <li class="bg-slate-50 p-3 rounded-lg">
+                            <p class="font-semibold text-slate-900">บิดา</p>
+                            <p>นายสุระชัย นุดา</p>
+                            <p class="text-xs text-slate-500 mt-1">อาชีพ: ค้าขาย</p>
+                        </li>
+                        <li class="bg-slate-50 p-3 rounded-lg">
+                            <p class="font-semibold text-slate-900">มารดา</p>
+                            <p>นางชนิภรณ์ ป่าครอง</p>
+                            <p class="text-xs text-slate-500 mt-1">อาชีพ: ค้าขาย</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Special Skills Card -->
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                    <div class="flex items-center gap-3 mb-6 border-b border-slate-100 pb-4">
+                        <div class="p-2 bg-amber-50 rounded-lg text-amber-600">
+                            <i data-lucide="sparkles" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800">ความสามารถพิเศษ</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-amber-50 text-amber-700 rounded-lg text-xs font-medium border border-amber-200/50 flex items-center gap-1.5">
+                            <i data-lucide="music" class="w-3.5 h-3.5"></i> เล่นดนตรี (เปียโน / กลอง / กีตาร์)
+                        </span>
+                        <span class="px-3 py-1.5 bg-amber-50 text-amber-700 rounded-lg text-xs font-medium border border-amber-200/50 flex items-center gap-1.5">
+                            <i data-lucide="crown" class="w-3.5 h-3.5"></i> มีความเป็นผู้นำ
+                        </span>
+                        <span class="px-3 py-1.5 bg-amber-50 text-amber-700 rounded-lg text-xs font-medium border border-amber-200/50 flex items-center gap-1.5">
+                            <i data-lucide="users" class="w-3.5 h-3.5"></i> การทำงานร่วมกันเป็นทีม
+                        </span>
+                        <span class="px-3 py-1.5 bg-amber-50 text-amber-700 rounded-lg text-xs font-medium border border-amber-200/50 flex items-center gap-1.5">
+                            <i data-lucide="activity" class="w-3.5 h-3.5"></i> เล่นกีฬา
+                        </span>
+                        <span class="px-3 py-1.5 bg-amber-50 text-amber-700 rounded-lg text-xs font-medium border border-amber-200/50 flex items-center gap-1.5">
+                            <i data-lucide="lightbulb" class="w-3.5 h-3.5"></i> มีความคิดสร้างสรรค์
+                        </span>
+                        <span class="px-3 py-1.5 bg-amber-50 text-amber-700 rounded-lg text-xs font-medium border border-amber-200/50 flex items-center gap-1.5">
+                            <i data-lucide="wrench" class="w-3.5 h-3.5"></i> แก้ปัญหาเฉพาะหน้าได้
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-semibold text-amber-600 uppercase tracking-widest">Education History</h2>
+                <p class="text-3xl font-bold text-slate-900 mt-2">ประวัติการศึกษา</p>
+                <div class="w-16 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative border-l-2 border-slate-200 ml-4 md:ml-32 space-y-12">
+                
+                <!-- High School Upper -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-amber-500 border-4 border-white shadow"></div>
+                    <div class="md:absolute md:-left-36 md:top-1 text-sm font-bold text-amber-600">มัธยมศึกษาตอนปลาย</div>
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                        <h3 class="text-lg font-bold text-slate-800">โรงเรียนบ้านไผ่ (บ.พ.)</h3>
+                        <p class="text-sm text-slate-600 mt-1">แผนการเรียน คณิตศาสตร์-วิทยาศาสตร์</p>
+                        <div class="mt-4 inline-block px-3 py-1 bg-amber-100 text-amber-800 font-semibold text-xs rounded-md">
+                            เกรดเฉลี่ยสะสม (4 ภาคเรียน): 3.01
+                        </div>
+                    </div>
+                </div>
+
+                <!-- High School Lower -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-400 border-4 border-white"></div>
+                    <div class="md:absolute md:-left-36 md:top-1 text-sm font-bold text-slate-500">มัธยมศึกษาตอนต้น</div>
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-800">โรงเรียนบ้านไผ่</h3>
+                        <div class="mt-3 text-xs text-slate-600">
+                            เกรดเฉลี่ยสะสม: 2.74
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primary School -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-300 border-4 border-white"></div>
+                    <div class="md:absolute md:-left-36 md:top-1 text-sm font-bold text-slate-500">ประถมศึกษาปีที่ 1-6</div>
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-800">โรงเรียนบ้านละว้า</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-semibold text-amber-400 uppercase tracking-widest">Activities</h2>
+                <p class="text-3xl font-bold text-white mt-2">กิจกรรมและการเข้าร่วม</p>
+                <div class="w-16 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Legal Activity - Highlighted -->
+                <div class="bg-gradient-to-b from-slate-800 to-slate-850 rounded-xl p-6 border-2 border-amber-500/50 shadow-xl col-span-1 md:col-span-2 lg:col-span-3">
+                    <div class="flex items-center gap-3 text-amber-400 mb-3">
+                        <i data-lucide="scale" class="w-6 h-6"></i>
+                        <span class="text-xs uppercase tracking-wider font-semibold">กิจกรรมด้านกฎหมาย (Highlight)</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">เข้าร่วมการบรรยายและเวทีเสวนาด้านกระบวนการยุติธรรม</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        เข้าร่วมการบรรยาย หัวข้อ <span class="text-amber-300">"กระบวนการยุติธรรมของไทย"</span> และเวทีเสวนา <span class="text-amber-300">"ทิศทางกระบวนการยุติธรรมในอนาคตของไทย"</span> ณ ศูนย์เยาวชนและครอบครัว เทศบาลนครขอนแก่น
+                    </p>
+                    <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-700/50 text-xs text-slate-300">
+                        <strong class="text-amber-400">การมีส่วนร่วม:</strong> ได้แลกเปลี่ยนความรู้และแนวคิดเกี่ยวกับกระบวนการยุติธรรมของประเทศไทย ได้รับความรู้จากทนายความผู้เชี่ยวชาญ และได้แลกเปลี่ยนความคิดเห็นกับผู้เข้าร่วมกิจกรรมจากต่างโรงเรียน
+                    </div>
+                </div>
+
+                <!-- Leadership -->
+                <div class="bg-slate-800/80 p-6 rounded-xl border border-slate-700 hover:border-amber-500/30 transition-all">
+                    <div class="flex items-center gap-2 text-amber-400 mb-3">
+                        <i data-lucide="award" class="w-5 h-5"></i>
+                        <h4 class="font-bold text-white">ภาวะความเป็นผู้นำ</h4>
+                    </div>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li>
+                            <strong class="text-white block">ประธานจัดกิจกรรม "จิตอาสาพี่ให้น้อง"</strong>
+                            จัดกิจกรรมของนักเรียน ม.6 ณ โรงเรียนบ้านละว้า ได้รับการชื่นชมจากผู้อำนวยการว่าเป็นแบบอย่างที่ดี
+                        </li>
+                        <li>
+                            <strong class="text-white block">อบรมแกนนำป้องกันยาเสพติด</strong>
+                            แกนนำเฝ้าระวังปัจจัยเสี่ยง ณ ศูนย์เยาวชนและครอบครัวเทศบาลนครขอนแก่น (สสส. และ สคล.)
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Academic -->
+                <div class="bg-slate-800/80 p-6 rounded-xl border border-slate-700 hover:border-amber-500/30 transition-all">
+                    <div class="flex items-center gap-2 text-amber-400 mb-3">
+                        <i data-lucide="book-open" class="w-5 h-5"></i>
+                        <h4 class="font-bold text-white">ด้านวิชาการ</h4>
+                    </div>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li>• แข่งขันกระบวนการแก้ปัญหาทางวิทยาศาสตร์ งานสัปดาห์วิทยาศาสตร์แห่งชาติ ณ ม.ขอนแก่น</li>
+                        <li>• การแข่งขัน SUDOKU ในสัปดาห์คณิตศาสตร์ โรงเรียนบ้านไผ่</li>
+                        <li>• กิจกรรมสร้างสรรค์การออกแบบและพัฒนานวัตกรรมเพื่อสังคม (20 ชั่วโมง)</li>
+                    </ul>
+                </div>
+
+                <!-- Volunteer -->
+                <div class="bg-slate-800/80 p-6 rounded-xl border border-slate-700 hover:border-amber-500/30 transition-all">
+                    <div class="flex items-center gap-2 text-amber-400 mb-3">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                        <h4 class="font-bold text-white">ด้านจิตอาสา & ยาเสพติด</h4>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li>• บริจาคเลือดกับสภากาชาดไทย ณ เทศบาลบ้านไผ่</li>
+                        <li>• แสดงความจำนงบริจาคอวัยวะและดวงตา</li>
+                        <li>• จิตอาสาเฝ้าระวังอุบัติเหตุเทศกาลสงกรานต์ ถนนข้าวเหนียว</li>
+                        <li>• อบรมอาสาสมัครเฝ้าระวังยาเสพติด และรณรงค์งดเหล้าเข้าพรรษา</li>
+                    </ul>
+                </div>
+
+                <!-- Environment -->
+                <div class="bg-slate-800/80 p-6 rounded-xl border border-slate-700 hover:border-amber-500/30 transition-all">
+                    <div class="flex items-center gap-2 text-amber-400 mb-3">
+                        <i data-lucide="leaf" class="w-5 h-5"></i>
+                        <h4 class="font-bold text-white">อนุรักษ์สิ่งแวดล้อม</h4>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li>• วิ่งการกุศลเพื่อปลูกป่า "วิ่งหยอก ดอกภูกระเจียว" อ.แวงน้อย</li>
+                        <li>• อบรมการอนุรักษ์สิ่งแวดล้อม สำนักงานทรัพยากรป่าไม้ที่ 7</li>
+                        <li>• กิจกรรมปลูกต้นไม้และเก็บขยะบริเวณบึงแก่นนคร</li>
+                    </ul>
+                </div>
+
+                <!-- Other Activities -->
+                <div class="bg-slate-800/80 p-6 rounded-xl border border-slate-700 hover:border-amber-500/30 transition-all col-span-1 md:col-span-2 lg:col-span-2">
+                    <div class="flex items-center gap-2 text-amber-400 mb-3">
+                        <i data-lucide="smile" class="w-5 h-5"></i>
+                        <h4 class="font-bold text-white">กิจกรรมดนตรี & นันทนาการอื่นๆ</h4>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300">
+                        <p>• นักดนตรีเล่นเปิดงานศิลปหัตถกรรม</p>
+                        <p>• เล่น Mini Concert งานสัปดาห์วิทยาศาสตร์</p>
+                        <p>• จัดซุ้มกิจกรรมวันสุนทรภู่</p>
+                        <p>• แข่งขันกรีฑา กีฬาสี "ตะแบกบานเกมส์"</p>
+                        <p>• เข้าโครงการ Find My Dream ค้นหาตนเอง</p>
+                        <p>• กิจกรรมแลกเปลี่ยนความรู้ภาษาไทย</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-semibold text-amber-600 uppercase tracking-widest">Certificates</h2>
+                <p class="text-3xl font-bold text-slate-900 mt-2">เกียรติบัตรและใบประกาศนียบัตร</p>
+                <div class="w-16 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Certificate Cards -->
+                <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-amber-50/30 transition-all flex items-start gap-4">
+                    <div class="p-3 bg-amber-100 text-amber-700 rounded-lg shrink-0">
+                        <i data-lucide="file-check" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-sm">CHULA MOOC</h4>
+                        <p class="text-xs text-slate-600 mt-1">หลักสูตร "Basic First Aid for Medical Emergency"</p>
+                    </div>
+                </div>
+
+                <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-amber-50/30 transition-all flex items-start gap-4">
+                    <div class="p-3 bg-amber-100 text-amber-700 rounded-lg shrink-0">
+                        <i data-lucide="file-check" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-sm">ป.ป.ส. ภาค 4</h4>
+                        <p class="text-xs text-slate-600 mt-1">หลักสูตร "รู้คิด รู้ทัน ป้องกันยาเสพติด"</p>
+                    </div>
+                </div>
+
+                <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-amber-50/30 transition-all flex items-start gap-4">
+                    <div class="p-3 bg-amber-100 text-amber-700 rounded-lg shrink-0">
+                        <i data-lucide="file-check" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-sm">สภากาชาดไทย</h4>
+                        <p class="text-xs text-slate-600 mt-1">การบริจาคดวงตาและอวัยวะเพื่อช่วยเหลือเพื่อนมนุษย์</p>
+                    </div>
+                </div>
+
+                <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-amber-50/30 transition-all flex items-start gap-4">
+                    <div class="p-3 bg-amber-100 text-amber-700 rounded-lg shrink-0">
+                        <i data-lucide="file-check" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-sm">สภากาชาดไทย & หน่วยงานภาคี</h4>
+                        <p class="text-xs text-slate-600 mt-1">การอบรมหลักสูตรการช่วยเหลือเมื่อเกิดอุบัติเหตุทางท้องถนน</p>
+                    </div>
+                </div>
+
+                <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-amber-50/30 transition-all flex items-start gap-4">
+                    <div class="p-3 bg-amber-100 text-amber-700 rounded-lg shrink-0">
+                        <i data-lucide="file-check" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-sm">สำนักจัดการทรัพยากรป่าไม้ที่ 7</h4>
+                        <p class="text-xs text-slate-600 mt-1">เข้าร่วมกิจกรรมค่ายเยาวชนจิตอาสาอนุรักษ์ป่า</p>
+                    </div>
+                </div>
+
+                <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-amber-50/30 transition-all flex items-start gap-4">
+                    <div class="p-3 bg-amber-100 text-amber-700 rounded-lg shrink-0">
+                        <i data-lucide="file-check" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-sm">บ้านพักเด็กและครอบครัว จ.ขอนแก่น</h4>
+                        <p class="text-xs text-slate-600 mt-1">ผ่านการคัดเลือกเข้าค่ายโครงการ Find My Dream</p>
+                    </div>
+                </div>
+
+                <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-amber-50/30 transition-all flex items-start gap-4">
+                    <div class="p-3 bg-amber-100 text-amber-700 rounded-lg shrink-0">
+                        <i data-lucide="file-check" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-sm">สสส. และ สคล.</h4>
+                        <p class="text-xs text-slate-600 mt-1">เข้าร่วมกิจกรรมรณรงค์งดเหล้าเข้าพรรษา</p>
+                    </div>
+                </div>
+
+                <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-amber-50/30 transition-all flex items-start gap-4">
+                    <div class="p-3 bg-amber-100 text-amber-700 rounded-lg shrink-0">
+                        <i data-lucide="file-check" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-sm">หน่วยงานรัฐ</h4>
+                        <p class="text-xs text-slate-600 mt-1">การอบรมหลักสูตร "บทบาทเยาวชนปกป้องสถาบันหลักของชาติ"</p>
+                    </div>
+                </div>
+
+                <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-amber-50/30 transition-all flex items-start gap-4">
+                    <div class="p-3 bg-amber-100 text-amber-700 rounded-lg shrink-0">
+                        <i data-lucide="file-check" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-sm">โรงเรียนบ้านไผ่</h4>
+                        <p class="text-xs text-slate-600 mt-1">การแข่งขันคณิตคิดเร็ว และการแข่งขันจรวดขวดน้ำ</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <section id="contact" class="bg-slate-950 text-white pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+                
+                <div>
+                    <h3 class="text-2xl font-bold text-amber-400 mb-4">ช่องทางการติดต่อ</h3>
+                    <p class="text-slate-400 text-sm mb-6 max-w-md">
+                        หากท่านต้องการสอบถามข้อมูลเพิ่มเติมเกี่ยวกับแฟ้มสะสมผลงาน หรือข้อมูลอื่นๆ สามารถติดต่อผ่านช่องทางด้านล่างนี้ได้ครับ
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 text-slate-300 text-sm">
+                            <div class="p-2.5 bg-slate-900 rounded-lg border border-slate-800 text-amber-400">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <span>061-841-6875</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-slate-300 text-sm">
+                            <div class="p-2.5 bg-slate-900 rounded-lg border border-slate-800 text-amber-400">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <span>Twopee14za@gmail.com</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-slate-300 text-sm">
+                            <div class="p-2.5 bg-slate-900 rounded-lg border border-slate-800 text-amber-400">
+                                <i data-lucide="facebook" class="w-5 h-5"></i>
+                            </div>
+                            <span>PH Phu Pha</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-slate-300 text-sm">
+                            <div class="p-2.5 bg-slate-900 rounded-lg border border-slate-800 text-amber-400">
+                                <i data-lucide="instagram" class="w-5 h-5"></i>
+                            </div>
+                            <span>phaphnx</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 flex flex-col justify-center text-center">
+                    <i data-lucide="quote" class="w-10 h-10 text-amber-500 mx-auto mb-4 opacity-50"></i>
+                    <p class="text-lg font-medium text-slate-200 italic mb-2">"ไม่มีสิ่งใดอยู่เหนือความพยายามและความอดทน"</p>
+                    <p class="text-sm text-amber-400 font-light">"หากอยากก้าวหน้า จงอย่าหยุดพัฒนาตัวเอง"</p>
+                    <div class="mt-6 pt-6 border-t border-slate-800 text-xs text-slate-400">
+                        ขอบพระคุณท่านคณะกรรมการที่พิจารณาแฟ้มสะสมผลงานเล่มนี้
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-slate-900 text-center text-xs text-slate-500">
+                © Portfolio - Phu Pha Nuda. Faculty of Law, Khon Kaen University.
+            </div>
+        </div>
+    </section>
+
+    <!-- Script to initialize Lucide Icons & Mobile Menu Toggle -->
+    <script>
+        lucide.createIcons();
+
+        // Mobile Menu Toggle Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
